@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:learningmarkersonmaps/core/services/provider/provider_registrar.dart';
+import 'package:provider/provider.dart';
 
 import 'pages/display_user_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: providerRegistrar,
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
